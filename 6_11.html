@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstArray = [4,8,7,12];
+        let secondArray = [3,6];
+        let result = 0;
+        
+        for (let i = 0; i < secondArray.length; i = i + 1) {
+            result = result + multi(firstArray, secondArray[i]);
+            }
+
+        console.log(firstArray);
+        console.log(secondArray);
+        console.log(result);
+
+    function multi(array, value) {
+        let x = 0;
+        for (i = 0; i < array.length; i++) {
+            x = x + value * array[i];
+        }
+        return x;
+    }
+    </script>
+</body>
+</html>

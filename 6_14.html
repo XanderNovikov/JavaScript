@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = new Array();
+        let l = parseInt(prompt("Entrez nombre de valeurs"));
+        let medium = 0;
+        let count = 0;
+
+        for (let i = 0; i < l; i = i + 1) {
+            array[i] = parseInt(prompt("Entrez nombre"));
+            medium = medium + array[i];
+            }
+        
+        for (let j = 0; j < array.length; j++) {
+            if (array[j] > medium / l) {
+                count = count + 1;
+            }
+        }
+        console.log(array);
+        console.log(medium/l);
+        console.log(count);
+
+    </script>
+
+</body>
+</html>

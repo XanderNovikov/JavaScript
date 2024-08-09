@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = new Array();
+        let sorted = [];
+        let l = parseInt(prompt("Entrez nombre de valeurs"));
+
+        for (let i = 0; i < l; i = i + 1) {
+            array[i] = parseInt(prompt("Entrez nombre"));
+            }
+        
+            console.log(array);
+        
+        do {
+            for (i = 0; i < array.length; i++) {
+            if (isMin(array, array[i])) {
+                sorted.push(array[i]);
+                array.splice(i, 1);
+            }
+            }
+        }
+        while (array.length > 0);
+        
+        console.log(array);
+        console.log(sorted);
+
+            if (consequent(sorted)) {
+                console.log("Is consequent");
+            } else {
+                console.log("Is NOT consequent");
+            }
+
+        function consequent(arr) {
+            let conseq = true;
+            for (let i = 0; i < sorted.length - 1; i++) {
+                if (sorted[i+1] - sorted[i] !== 1) {
+                conseq = false;
+            }
+
+        } return conseq;
+    }
+
+        function isMin(arr, value) {
+            let x = true;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < value) {
+                    x = false;
+                }
+
+            } return x;
+        }
+
+    </script>
+
+</body>
+</html>

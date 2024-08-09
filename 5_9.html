@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="par"></p>
+    <script>
+        let str = prompt("Entrez un nombre");
+        const myArray = str.split(",");
+        let l = myArray.length;
+
+        function sum(k) {
+            if (k >= 0) {
+                return (parseInt(myArray[k]) + sum(k - 1));
+        } return 0;
+        }
+
+        let result = sum(l - 1)
+
+        alert("Vous devez " + result);
+
+        let arg = prompt("Combien vous voulez payer ?");
+
+        let dif = arg - result;
+        let d = 0;
+        let s = 0;
+        let u = 0;
+
+        if (arg < result) {
+            alert("Ce n'est pas suffisant")
+        } else {
+            d = Math.floor(dif / 10);
+            s = Math.floor((dif - d * 10) / 5);
+            u = Math.floor(dif - d * 10 - s * 5);
+            document.getElementById("par").innerHTML = "Remise est :" + "<br>" + d + " coupures de 10 Euro" + "<br>" + s + " coupures de 5 Euro" + "<br>" + u + " pieces de 1 Euro";
+        }  
+    </script>
+
+</body>
+</html>
